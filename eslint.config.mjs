@@ -9,7 +9,6 @@ export default [
  { languageOptions: { globals: globals.node } },
  eslintConfigPrettier,
  {
-   ...pluginJs.configs.recommended,
    ...playwright.configs['flat/recommended'],
    rules: {
      ...pluginJs.configs.recommended.rules,
@@ -21,7 +20,6 @@ export default [
          comments: 80,
        },
      ],
-     ...playwright.configs['flat/recommended'].rules,
      'playwright/expect-expect': 'off',
    },
    ignores: [
