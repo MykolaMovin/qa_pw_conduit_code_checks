@@ -1,6 +1,4 @@
 import globals from 'globals';
-import pluginJs from '@eslint/js';
-import playwright from 'eslint-plugin-playwright';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 
@@ -9,9 +7,7 @@ export default [
  { languageOptions: { globals: globals.node } },
  eslintConfigPrettier,
  {
-   ...playwright.configs['flat/recommended'],
    rules: {
-     ...pluginJs.configs.recommended.rules,
      'no-unused-vars': 'error',
      'max-len': [
        'error',
